@@ -1,6 +1,6 @@
-# require 'dockingstation'
+require 'dockingstation'
 
 describe DockingStation do
-    
+
 
 end
