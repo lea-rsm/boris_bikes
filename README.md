@@ -1,8 +1,8 @@
-##Boris Bikes##
+##Boris Bikes
 
 Week 1 challenge
 
-###Steps to follow :###
+###Steps to follow :
 
 Setting up a Project
 Working with User Stories
