@@ -9,17 +9,26 @@ class DockingStation
   end
 
 
+
   def release_bike
-      raise "There are no bikes available" if @bike_collection.empty?
+      raise "There are no bikes available" if empty?
     @bike_collection.pop
 
   end
 
 def dock_bike(bike)
-      raise "No more place for your bike" if @bike_collection.length >= 20
+      raise "No more place for your bike" if full?
       @bike_collection << bike
       return "Bike docked"
 
+end
+private 
+
+def full?
+  @bike_collection.length >= 20 ? true : false
+end
+def empty?
+  @bike_collection.empty? ? true : false
 end
 
 end
