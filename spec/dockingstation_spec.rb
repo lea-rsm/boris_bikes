@@ -24,8 +24,8 @@ end
 
   it "raise the error Station is already full" do
     bike = Bike.new
-    subject.dock_bike(bike)
-    expect{subject.dock_bike(bike)}.to raise_error("A bike is already there")
+    20.times {subject.dock_bike(bike)}
+    expect{subject.dock_bike(bike)}.to raise_error("No more place for your bike")
 
   end
 
