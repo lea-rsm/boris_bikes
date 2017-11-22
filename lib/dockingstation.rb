@@ -5,11 +5,9 @@ class DockingStation
   attr_reader :bike
 
   def release_bike
-    if @bike == nil
-      raise "There are no bikes available"
-    else
-    Bike.new
-  end
+      raise "There are no bikes available" unless @bike
+    @bike
+  
   end
 
 def initialize
