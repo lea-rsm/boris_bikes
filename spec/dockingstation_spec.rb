@@ -22,13 +22,14 @@ end
     expect(subject.dock_bike(bike)).to eq "Bike docked"
   end
 
-  it "Station is already full" do
+  it "raise the error Station is already full" do
     bike = Bike.new
     subject.dock_bike(bike)
-    expect(subject.dock_bike(bike)).to eq "A bike is already there"
+    expect{subject.dock_bike(bike)}.to raise_error("A bike is already there")
+
   end
 
-it "raise an error" do
+it "raise the error There are no bikes available" do
   expect{DockingStation.new.release_bike}.to raise_error("There are no bikes available")
 
 end
