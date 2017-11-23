@@ -24,7 +24,7 @@ end
 
   it "raise the error Station is already full" do
     bike = Bike.new
-    20.times {subject.dock_bike(bike)}
+    DockingStation::DEFAULT_CAPACITY.times {subject.dock_bike(bike)}
     expect{subject.dock_bike(bike)}.to raise_error("No more place for your bike")
 
   end
@@ -33,5 +33,6 @@ it "raise the error There are no bikes available" do
   expect{DockingStation.new.release_bike}.to raise_error("There are no bikes available")
 
 end
-
+it "Default capacity to 20 bikes"
+expect()
 end
