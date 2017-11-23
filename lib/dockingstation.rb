@@ -22,13 +22,13 @@ def dock_bike(bike)
       return "Bike docked"
 
 end
-private 
+private
 
 def full?
-  @bike_collection.length >= 20 ? true : false
+  @bike_collection.length >= 20 ?
 end
 def empty?
-  @bike_collection.empty? ? true : false
+  @bike_collection.empty? ?
 end
 
 end
