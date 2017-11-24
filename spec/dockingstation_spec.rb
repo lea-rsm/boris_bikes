@@ -33,7 +33,11 @@ it "raise the error There are no bikes available" do
   expect{DockingStation.new.release_bike}.to raise_error("There are no bikes available")
 
 end
-it "set capacity to user's choice or give it default value" do
+it "set capacity to default value" do
   expect(subject.capacity).to eq(DockingStation::DEFAULT_CAPACITY)
+end
+  it "set capacity to user's choice" do
+    station = DockingStation.new(60)
+    expect(station.capacity).to eq(60)
   end
 end
